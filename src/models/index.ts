@@ -1,4 +1,16 @@
-const users = {
+export interface user {
+  id: string,
+  username: string,
+  messageIds: number[],
+}
+
+export interface message {
+  id: string,
+  text: string,
+  userId: string,
+}
+
+const users: {[key: string]: user} = {
   1: {
     id: '1',
     username: 'Robin Wieruch',
@@ -11,7 +23,7 @@ const users = {
   },
 };
 
-const messages = {
+const messages: {[key: string]: message} = {
   1: {
     id: '1',
     text: 'Hello World',
